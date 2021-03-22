@@ -9,3 +9,5 @@ let g:lightline = {
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+#https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste
+#paste

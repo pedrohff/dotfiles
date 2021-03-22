@@ -1,9 +1,13 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
+    ~/.profile: bash/profile.sh
     ~/.gitconfig: gitconfig
-    ~/.vimrc: vimrc
+    ~/.vimrc: vim/vimrc.sh
+    ~/.dotfileshelpers/go.sh: bash/go.sh
+    ~/.dotfileshelpers/k8s.sh: bash/k8s.sh
+
+- create:
+    - ~/.dotfileshelpers
 
 
