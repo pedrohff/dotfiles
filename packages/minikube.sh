@@ -1,8 +1,12 @@
-https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-sudo dpkg -i minikube_latest_amd64.deb
+if command -v minikube; then
+  echo "minikube already installed"
+else
+  wget https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+  sudo dpkg -i minikube_latest_amd64.deb
 
-#start kubernetes cluster
-minikube start
+  #start kubernetes cluster
+  minikube start
 
-#test if cluster is ok
-kubectl get pod -A
+  #test if cluster is ok
+  kubectl get pod -A
+fi
