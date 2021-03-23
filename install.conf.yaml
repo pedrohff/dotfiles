@@ -11,5 +11,6 @@
     - ~/.dotfileshelpers
 
 - shell:
-    - [packages/install.sh, Installing tools]
-    - [packages/minikube.sh, Installing minikube]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [sh packages/install.sh, Installing tools]
+    - [sh packages/minikube.sh, Installing minikube]
