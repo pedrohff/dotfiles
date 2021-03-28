@@ -1,2 +1,0 @@
-[url "git@ssh.dev.azure.com:v3/conductortech/billing/middleware-golang"]
-	insteadOf = https://dev.azure.com/conductortech/billing/_git/middleware-golang

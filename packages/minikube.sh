@@ -1,12 +1,16 @@
-if command -v minikube; then
-  echo "minikube already installed"
-else
-  wget https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-  sudo dpkg -i minikube_latest_amd64.deb
+#!/usr/bin/env bash
 
-  #start kubernetes cluster
-  minikube start
+minikube-install() {
+  if command -v minikube &> /dev/null; then
+    part "minikube already installed"
+  else
+    wget https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+    sudo dpkg -i minikube_latest_amd64.deb
 
-  #test if cluster is ok
-  kubectl get pod -A
-fi
+    #start kubernetes cluster
+    minikube start --driver=docker
+
+    #test if cluster is ok
+    kubectl get pod -A
+  fi
+}

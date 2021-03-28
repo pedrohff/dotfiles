@@ -1,9 +1,13 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: bash/profile.sh
+    ~/.bashrc:
+        force: true
+        path: bash/profile.sh
     ~/.gitconfig: gitconfig
-    ~/.vimrc: vim/vimrc.sh
+    ~/.vimrc:
+        force: true
+        path: vim/vimrc.sh
     ~/.dotfileshelpers/go.sh: bash/go.sh
     ~/.dotfileshelpers/k8s.sh: bash/k8s.sh
 
@@ -11,6 +15,5 @@
     - ~/.dotfileshelpers
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    - [sh packages/install.sh, Installing tools]
-    - [sh packages/minikube.sh, Installing minikube]
+    - [sh packages/install.sh > runlogs.txt, Installing tools]
+
