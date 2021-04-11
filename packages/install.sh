@@ -9,7 +9,7 @@ part "Updating repositories"
 sudo apt update -y &> /dev/null
 
 jq-install
-installifnotexists vim
+vim-install
 installifnotexists gawk
 installifnotexists curl
 

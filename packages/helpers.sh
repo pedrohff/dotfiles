@@ -28,3 +28,11 @@ jq-install(){
         localinstall jq
     fi
 }
+
+vim-install(){
+    if ! command -v vim &> /dev/null; then
+	localinstall vim
+	part "Installing pathogen"
+	mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    fi
+}
