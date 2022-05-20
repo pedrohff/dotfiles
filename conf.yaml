@@ -7,17 +7,21 @@
     ~/.zshrc:
         force: true
         path: bash/zsh.sh
+    ~/.p10k.zsh:
+        force: true
+        path: bash/p10k.zsh
     ~/.gitconfig: gitconfig
     ~/.vimrc:
         force: true
         path: vim/vimrc.sh
     ~/.dotfileshelpers/go.sh: bash/go.sh
     ~/.dotfileshelpers/k8s.sh: bash/k8s.sh
+    ~/.config/nvim: nvim/
 
 - create:
     - ~/.dotfileshelpers
 
-- shell:
-    - [bash packages/install.sh > runlogs.txt, Installing tools]
-    - []
+# - shell: 
+#     - [bash packages/install.sh > runlogs.txt, Installing tools]
+#     - []
 
