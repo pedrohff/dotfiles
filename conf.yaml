@@ -16,7 +16,7 @@
         path: vim/vimrc.sh
     ~/.dotfileshelpers/go.sh: bash/go.sh
     ~/.dotfileshelpers/k8s.sh: bash/k8s.sh
-    ~/.config/nvim: nvim/
+    ~/.config/nvim/init.vim: nvim/init.vim
 
 - create:
     - ~/.dotfileshelpers
