@@ -14,6 +14,12 @@ Plug 'psliwka/vim-smoothie'
 Plug 'sainnhe/everforest'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do':'CocInstall coc-go'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+
 call plug#end()
 
 " NERDTree
@@ -58,3 +64,8 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Remove Go's "go to definition" mapping
+let g:go_def_mapping_enabled = 0
+
+source ~/.config/nvim/coc.vim
