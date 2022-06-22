@@ -19,7 +19,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " NERDTree
@@ -57,6 +57,11 @@ nnoremap <C-f><C-f> :Ag<CR>
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true, 'yoffset': 1.0 } }
 let g:fzf_history_dir = '~/.config/nvim/fzf-history'
 
+" Spacing/tabs
+" ---------------------------------------------------------------------
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Use ctrl-[hjkl] to select the active split!
 " ---------------------------------------------------------------------
@@ -67,5 +72,11 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 " Remove Go's "go to definition" mapping
 let g:go_def_mapping_enabled = 0
+let g:go_metalinter_command = 'golangci-lint'
+"let g:go_linters_enabled = []
+let g:go_metalinter_enabled = ['contextcheck', 'cyclop', 'errorlint', 'exhaustive', 'exportloopref', 'gofmt', 'gomnd', 'gosec', 'ifshort', 'makezero', 'misspell', 'nilerr', 'noctx', 'revive', 'tagliatelle', 'tenv', 'unconvert', 'unparam', 'wrapcheck', 'deadcode']
+let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['contextcheck', 'cyclop', 'errorlint', 'exhaustive', 'exportloopref', 'gofmt', 'gomnd', 'gosec', 'ifshort', 'makezero', 'misspell', 'nilerr', 'noctx', 'revive', 'tagliatelle', 'tenv', 'unconvert', 'unparam', 'wrapcheck', 'deadcode']
+
 
 source ~/.config/nvim/coc.vim
