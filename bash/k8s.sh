@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-alias k="kubectl"
+alias k="kubecolor"
 alias ksvc="kubectl get svc -A | grep -v none | awk '{printf \"%-30s - %s:%.4s\\n\",$2,$5,$6}'| grep"
 alias kns="kubectl ns"
 alias kctx="kubectl ctx"
@@ -32,4 +32,12 @@ recyclepods() {
   kubectl get pods | grep CrashLoop | awk '{print $1}' | xargs kubectl delete pod
   kubectl get pods | grep OOM | awk '{print $1}' | xargs kubectl delete pod
   kubectl get pods | grep Error | awk '{print $1}' | xargs kubectl delete pod
+}
+
+wp() {
+    watch "kubectl get pod"
+}
+
+wpn() {
+    watch "kubectl get pod | grep $1"
 }

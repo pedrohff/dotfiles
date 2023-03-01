@@ -2,6 +2,7 @@
 #source ~/.dotfiles/bash/terminal.sh
 source ~/.dotfiles/bash/k8s.sh
 source ~/.dotfiles/bash/go.sh
+source ~/.dotfiles/bash/git.sh
 
 recyclepods() {
   kubectl get pods | grep RunContainerError | awk '{print $1}' | xargs kubectl delete pod

@@ -20,6 +20,7 @@ Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " NERDTree
@@ -76,6 +77,8 @@ let g:go_metalinter_command = 'golangci-lint'
 "let g:go_linters_enabled = []
 let g:go_metalinter_enabled = ['contextcheck', 'cyclop', 'errorlint', 'exhaustive', 'exportloopref', 'gofmt', 'gomnd', 'gosec', 'ifshort', 'makezero', 'misspell', 'nilerr', 'noctx', 'revive', 'tagliatelle', 'tenv', 'unconvert', 'unparam', 'wrapcheck', 'deadcode']
 let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['contextcheck', 'cyclop', 'errorlint', 'exhaustive', 'exportloopref', 'gofmt', 'gomnd', 'gosec', 'ifshort', 'makezero', 'misspell', 'nilerr', 'noctx', 'revive', 'tagliatelle', 'tenv', 'unconvert', 'unparam', 'wrapcheck', 'deadcode']
+
 "let g:go_metalinter_autosave_enabled = ['contextcheck', 'cyclop', 'errorlint', 'exhaustive', 'exportloopref', 'gofmt', 'gomnd', 'gosec', 'ifshort', 'makezero', 'misspell', 'nilerr', 'noctx', 'revive', 'tagliatelle', 'tenv', 'unconvert', 'unparam', 'wrapcheck', 'deadcode']
 
 
