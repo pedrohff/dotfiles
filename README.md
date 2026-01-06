@@ -4,8 +4,6 @@ This is a project to automate the setup of a new linux machine, installing tools
 
 This way I can also version my .bashrc related files.
 
-It uses [dotbot](https://github.com/anishathalye/dotbot) for linking files and automating the process.
-
 ## Usage
 
 Clone the project with

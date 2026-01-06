@@ -7,15 +7,6 @@ alias ksvc="kubectl get svc -A | grep -v none | awk '{printf \"%-30s - http://%s
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="${PATH}:${HOME}/.krew/bin"
 
-
-getksqlpodname (){
-	kubectl get pods -n processing | grep Running | grep ksqldb-server-0 | awk '{printf $1}'
-}
-
-ksql (){
-	kubectl exec getsqlpodname -n processing -i -t -- bash -c 'unset JMX_PORT && ksql'
-}
-
 kn () {
 	ns=$(kubectl ns | grep $1)
 	echo "Changing namespace to $ns"

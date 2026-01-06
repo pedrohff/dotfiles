@@ -16,3 +16,6 @@ gcom() {
     git fetch --all
     git checkout -b $1 origin/main
 }
+
+
+# TODO: Plan adding git global config to the repo
