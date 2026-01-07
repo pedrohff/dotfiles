@@ -1,3 +1,4 @@
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree position=current<CR>")
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
