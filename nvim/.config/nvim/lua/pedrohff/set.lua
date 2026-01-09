@@ -30,3 +30,6 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+--vim.cmd.colorscheme("catppuccin-mocha")
