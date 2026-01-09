@@ -5,3 +5,5 @@ set -e
 stow tmux
 stow nvim
 stow bash
+stow ghostty
+stow starship
