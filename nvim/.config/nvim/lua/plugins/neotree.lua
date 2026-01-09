@@ -10,6 +10,10 @@ return {
     },
     lazy = false, -- neo-tree will lazily load itself
     opts = {
+        name = {
+            use_git_status_colors = false,
+            highlight = "NeoTreeFileName",
+        },
         window = {
             mappings = {
                 ["["] = "expand_all_subnodes",
