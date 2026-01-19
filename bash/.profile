@@ -14,3 +14,6 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 # alias cd="z"
+
+alias t="tmux"
+alias ta="tmux a"
