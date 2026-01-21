@@ -7,6 +7,7 @@ return {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
             "nvim-tree/nvim-web-devicons", -- optional, but recommended
+            "3rd/image.nvim",
         },
         lazy = false, -- neo-tree will lazily load itself
         init = function()
@@ -32,8 +33,19 @@ return {
             window = {
                 mappings = {
                     ["["] = "expand_all_subnodes",
-                    ["]"] = "close_all_nodes"
+                    ["]"] = "close_all_nodes",
+                    ["O"] = "system_open"
                 }
+            },
+            commands = {
+                system_open = function(state)
+                    local node = state.tree:get_node()
+                    local path = node:get_id()
+                    -- macOs: open file in default application in the background.
+                    --vim.fn.jobstart({ "open", path }, { detach = true })
+                    -- Linux: open file in default application
+                    vim.fn.jobstart({ "xdg-open", path }, { detach = true })
+                end,
             },
             filesystem = {
                 position = "current",
