@@ -49,4 +49,5 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
---vim.keymap.set("i", "<C-Space>", "<cmd>lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set({"i", "n"}, "<C-Space>", "<cmd>lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})

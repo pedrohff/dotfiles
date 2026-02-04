@@ -1,13 +1,14 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     version = false,
+    lazy = false,
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
     config = function()
-        require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter.config").setup({
             sync_install = false,
             ignore_install = { "javascript" },
             modules = {},

@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>e", "<Cmd>Neotree position=current<CR>")
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal position=current<CR>")
 return {
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -7,7 +7,7 @@ return {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
             "nvim-tree/nvim-web-devicons", -- optional, but recommended
-            "3rd/image.nvim",
+            --"3rd/image.nvim",
         },
         lazy = false, -- neo-tree will lazily load itself
         init = function()
