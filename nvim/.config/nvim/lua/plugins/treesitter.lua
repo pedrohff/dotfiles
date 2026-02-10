@@ -6,6 +6,7 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
+        --"nvim-treesitter/nvim-treesitter-refactor",
     },
     config = function()
         require("nvim-treesitter.config").setup({
@@ -14,7 +15,14 @@ return {
             modules = {},
             highlight = {
                 enable = true,
-                additional_vim_regex_highlighting = false,
+                additional_vim_regex_highlighting = true,
+            },
+            refactor = {
+                highlight_definitions = {
+                    enable = true,
+                    -- Set to false if you have an `updatetime` of ~100.
+                    clear_on_cursor_move = true,
+                },
             },
             indent = { enable = true },
             auto_install = true,
