@@ -46,8 +46,10 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+    vim.cmd(":so $MYVIMRC")
 end)
 
 vim.keymap.set({"i", "n"}, "<C-Space>", "<cmd>lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal position=current<CR>")
+vim.keymap.set("n", "<leader>r", "<Cmd>Telescope oldfiles<CR>")
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})

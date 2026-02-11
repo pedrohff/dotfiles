@@ -36,3 +36,4 @@ vim.g.loaded_tutor_mode_plugin = 1
 vim.cmd.colorscheme("catppuccin-mocha")
 
 vim.opt.wrap = true
+vim.opt.cmdheight = 0
