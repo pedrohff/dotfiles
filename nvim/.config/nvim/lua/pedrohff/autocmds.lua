@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("<leader>lr", vim.lsp.buf.rename, "Rename all references")
         map("<leader>lf", vim.lsp.buf.format, "Format")
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
-        map("<C-i>", "<cmd>GoImports<cr>", "Fix go imports")
+        map("<C-i>", "<cmd>GoImports<cr><cmd>GoFmt<cr>", "Fix go imports")
         map("<leader>pu", ':lua require("telescope.builtin").lsp_references()<CR>', "Find usages in telescope")
 
         local function client_supports_method(client, method, bufnr)
@@ -65,3 +65,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 
 })
+
+require("persistence").load()

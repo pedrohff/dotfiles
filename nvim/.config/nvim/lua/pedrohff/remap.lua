@@ -53,3 +53,5 @@ vim.keymap.set({"i", "n"}, "<C-Space>", "<cmd>lua vim.lsp.buf.hover()<CR>")
 vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal position=current<CR>")
 vim.keymap.set("n", "<leader>r", "<Cmd>Telescope oldfiles<CR>")
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+
+vim.keymap.set('n', "<C-p>", "A<CR><Esc>p") -- paste in the line below

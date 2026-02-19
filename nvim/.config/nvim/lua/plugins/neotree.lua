@@ -1,4 +1,3 @@
-vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal position=current<CR>")
 return {
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -49,7 +48,7 @@ return {
             },
             filesystem = {
                 position = "current",
-                hijack_netrw_behavior = "open_current",
+                hijack_netrw_behavior = "disabled",
                 -- "open_default",
                 -- "disabled",
                 filtered_items = {
