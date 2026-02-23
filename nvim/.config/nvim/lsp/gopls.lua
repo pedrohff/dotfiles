@@ -16,12 +16,12 @@ return {
 				vendor = true,
 			},
 			hints = {
-				assignVariableTypes = false,
+				assignVariableTypes = true, -- TODO: check this
 				compositeLiteralFields = false,
 				compositeLiteralTypes = false,
 				constantValues = false,
 				functionTypeParameters = false,
-				parameterNames = false,
+				parameterNames = true, -- TODO: check this
 				rangeVariableTypes = false,
 			},
 			analyses = {
