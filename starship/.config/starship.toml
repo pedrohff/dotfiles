@@ -3,12 +3,10 @@
 format = """
 [](red)\
 $os\
-$username\
 [](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
-$git_status\
 [](fg:yellow bg:green)\
 $c\
 $rust\
@@ -29,6 +27,7 @@ $line_break\
 $character"""
 
 palette = 'catppuccin_mocha'
+
 
 [os]
 disabled = false
@@ -57,31 +56,37 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
-show_always = true
+show_always = false
 style_user = "bg:red fg:crust"
 style_root = "bg:red fg:crust"
 format = '[ $user]($style)'
 
 [directory]
 style = "bg:peach fg:crust"
+repo_root_style = "bold bg:peach fg:crust"
+before_repo_root_style = "bold bg:peach fg:text"
+repo_root_format = '[$before_root_path]($before_repo_root_style)[ $repo_root ]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+truncation_length = 8
+truncation_symbol = ""
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
 
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"dev" = "󰲋 "
 
 [git_branch]
+disabled=false
 symbol = ""
 style = "bg:yellow"
 format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
-disabled=true
+disabled = true
 style = "bg:yellow"
 format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
 
@@ -150,7 +155,7 @@ style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 [line_break]
-disabled = true
+disabled = false
 
 [character]
 disabled = false
