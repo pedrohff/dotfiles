@@ -15,3 +15,5 @@ eval "$(zoxide init bash)"
 alias t="tmux"
 alias ta="tmux a"
 alias ts="tmux source ~/.tmux.conf"
+
+. "$HOME/.local/share/../bin/env"
