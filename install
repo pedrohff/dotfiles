@@ -8,3 +8,4 @@ stow bash
 stow ghostty
 stow starship
 stow lazygit
+stow opencode

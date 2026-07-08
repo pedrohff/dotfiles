@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/gpt-5.1-codex",
+  "autoupdate": false,
+  "provider": {},
+  "permission": {
+    "task": {
+      "golang": "allow",
+      "docker-compose": "allow",
+      "container-runner": "allow",
+      "software-patterns": "allow",
+      "data-engineer": "allow",
+      "data-delta": "allow",
+      "data-lake": "allow",
+      "data-spark": "allow",
+      "git-specialist": "allow",
+      "code-security": "allow",
+      "code-lint": "allow",
+      "code-test-coverage": "allow",
+      "code-quality": "allow",
+      "code-architect": "allow",
+      "code-product": "allow",
+      "databricks": "allow"
+    }
+  }
+}
